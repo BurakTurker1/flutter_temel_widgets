@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_temel_widgets/dropDown_button.dart';
 import 'package:flutter_temel_widgets/image_witgets.dart';
 import 'package:flutter_temel_widgets/myCountPage.dart';
+import 'package:flutter_temel_widgets/popUpMenu.dart';
 import 'package:flutter_temel_widgets/temel_button_yapilari.dart';
 void main(List<String> args) {
   runApp(MyApp());
@@ -20,14 +21,16 @@ class MyApp extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all(Colors.orange),
           foregroundColor:MaterialStateProperty.all(Colors.white), 
           overlayColor: MaterialStateProperty.all(Colors.red)),
-          
+
           )
         ),
       home: Scaffold(
         appBar: AppBar(title: Text('Flutter widgets Örnekleri',style:TextStyle(color: Colors.white),),backgroundColor: Colors.black,
         centerTitle: true,
+         actions: [PopUpMenuOrnek()] ,
         ),
-        body:DropDown_Button(),
+        body:PopUpMenuOrnek(),
+        //DropDown_Button(),
         //TemelButonlar(),
         //ImageOrnekleri(),
       ),
