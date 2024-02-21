@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_temel_widgets/image_witgets.dart';
 import 'package:flutter_temel_widgets/myCountPage.dart';
+import 'package:flutter_temel_widgets/temel_button_yapilari.dart';
 void main(List<String> args) {
   runApp(MyApp());
 }
@@ -13,13 +14,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My Counter App',
       theme: ThemeData(
-        colorScheme:ColorScheme.fromSwatch(primarySwatch: Colors.brown)
+        colorScheme:ColorScheme.fromSwatch(primarySwatch: Colors.red,backgroundColor: Colors.white),
+        outlinedButtonTheme: OutlinedButtonThemeData(style:ButtonStyle(
+          backgroundColor: MaterialStateProperty.all(Colors.orange),
+          foregroundColor:MaterialStateProperty.all(Colors.white), 
+          overlayColor: MaterialStateProperty.all(Colors.red)),
+          
+          )
         ),
       home: Scaffold(
         appBar: AppBar(title: Text('Image witgets örnekleri',style:TextStyle(color: Colors.white),),backgroundColor: Colors.black,
         centerTitle: true,
         ),
-        body:ImageOrnekleri(),
+        body:TemelButonlar(),
+        //ImageOrnekleri(),
       ),
       //MyCountPage(),
     );
